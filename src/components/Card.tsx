@@ -1,12 +1,24 @@
+import { useNavigate } from 'react-router-dom'
+
 interface CardProps {
+  id: string // Added id field
   image: string
   title: string
   description: string
 }
 
-function Card({ image, title, description }: CardProps): JSX.Element {
+function Card({ id, image, title, description }: CardProps): JSX.Element {
+  const navigate = useNavigate()
+
+  const handleClick = () => {
+    navigate(`/category/${id}`)
+  }
+
   return (
-    <div className="aspect-square bg-white rounded-lg shadow-md overflow-hidden group">
+    <div
+      className="aspect-square bg-white rounded-lg shadow-md overflow-hidden group cursor-pointer"
+      onClick={handleClick}
+    >
       <div className="h-3/4 overflow-hidden relative">
         <img
           src={image}

@@ -1,0 +1,33 @@
+.carousel {
+  width: 100%;
+  max-width: 1200px; /* Adjust this value as needed */
+  padding-bottom: 50px !important;
+}
+
+.swiper {
+  width: 50%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Adjust as needed */
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}

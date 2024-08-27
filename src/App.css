@@ -40,29 +40,6 @@
   color: #888;
 }
 
-.carousel {
-  width: 50%;
-  padding-bottom: 50px !important;
-}
-
-.swiper {
-  width: 50%;
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-.swiper-slide {
-  background-position: center;
-  background-size: cover;
-  width: 300px;
-  height: 300px;
-}
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
-}
-
 /* .carousel {
   width: 50%;
   padding-bottom: 50px !important;
