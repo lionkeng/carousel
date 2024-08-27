@@ -1,10 +1,10 @@
 import './App.css'
-import Carousel from './Carousel'
+import StoreFront from './StoreFront'
 
 function App() {
   return (
     <>
-      <Carousel />
+      <StoreFront />
     </>
   )
 }

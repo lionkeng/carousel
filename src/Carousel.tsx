@@ -34,7 +34,7 @@ export default function Carousel(): JSX.Element {
       effect="coverflow"
       grabCursor={true}
       centeredSlides={true}
-      slidesPerView={3}
+      slidesPerView={2}
       coverflowEffect={{
         rotate: 0,
         stretch: 1,
