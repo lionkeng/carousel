@@ -1,4 +1,6 @@
+import { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { AppContext } from '../context/AppContext'
 
 interface CardProps {
   id: string // Added id field
@@ -9,8 +11,9 @@ interface CardProps {
 
 function Card({ id, image, title, description }: CardProps): JSX.Element {
   const navigate = useNavigate()
-
+  const { setSelectedProduct } = useContext(AppContext)
   const handleClick = () => {
+    setSelectedProduct(parseInt(id, 10))
     navigate(`/category/${id}`)
   }
 

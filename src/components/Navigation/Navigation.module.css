@@ -1,0 +1,7 @@
+.root {
+  @apply relative z-[1] flex w-screen justify-center h-16 pt-2;
+}
+
+.list {
+  @apply flex list-none rounded-[6px] bg-white p-1 shadow-[0_2px_10px] w-full;
+}
