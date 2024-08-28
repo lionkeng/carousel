@@ -17,8 +17,13 @@ import 'swiper/css/effect-coverflow'
 
 import './styles.css'
 import floorplans from '../../assets/floorplans'
+import { useContext } from 'react'
+import { AppContext } from '../../context/AppContext'
+import { useNavigate } from 'react-router-dom'
 
 export default function Carousel(): JSX.Element {
+  const { setSelectedFloorplan } = useContext(AppContext)
+  const navigate = useNavigate()
   // if you want to use array
   const slide_img = floorplans
   return (
@@ -40,9 +45,17 @@ export default function Carousel(): JSX.Element {
         }}
         navigation
         pagination={{ clickable: true }}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log('slide change')}
+        onClick={(swiper) => {
+          // we will only respond if the activeIndex and clickedIndex is the same
+          if (swiper.clickedIndex === swiper.activeIndex) {
+            const floorplan = floorplans[swiper.clickedIndex - 1]
+            setSelectedFloorplan(floorplan.id)
+            navigate(`/floorplan/${floorplan.id}`)
+          }
+        }}
         className={'carousel'}
+        preventClicks={true}
+        preventClicksPropagation={true}
       >
         {slide_img.map((img, i) => (
           <SwiperSlide key={i}>

@@ -3,6 +3,7 @@ import StoreFront from './pages/StoreFront'
 import Category from './pages/Category'
 import Navigation from './components/Navigation/Navigation'
 import { AppProvider } from './context/AppContext'
+import Floorplan from './pages/Floorplan'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
             <Routes>
               <Route path="/" element={<StoreFront />} />
               <Route path="/category/:categoryId" element={<Category />} />
+              <Route path="/floorplan/:floorplanId" element={<Floorplan />} />
             </Routes>
           </main>
         </div>

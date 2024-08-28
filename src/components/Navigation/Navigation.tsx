@@ -24,7 +24,7 @@ const Navigation = () => {
               to="/"
               className="block select-none rounded-[4px] px-3 py-2 text-[15px] font-medium leading-none text-violet11 no-underline outline-none hover:bg-violet3 focus:shadow-[0_0_0_2px] focus:shadow-violet7"
             >
-              Home
+              Select floor plan features for your lifestyle
             </Link>
           </NavigationMenu.Link>
         </NavigationMenu.Item>
