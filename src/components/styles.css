@@ -33,7 +33,13 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
+  transition: scale 0.3s ease-in-out;
 }
+
+/* .swiper-slide-active img:hover {
+  scale: 1.5;
+  transition: scale 0.3s ease-in-out;
+} */
 
 .swiper-slide-active .swiper-slide-shadow-left,
 .swiper-slide-active .swiper-slide-shadow-right {
@@ -61,4 +67,5 @@
   width: 100%;
   display: flex;
   background-color: white;
+  overflow: hidden;
 }
