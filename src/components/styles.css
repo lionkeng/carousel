@@ -1,11 +1,12 @@
 .carousel {
   width: 100%;
-  max-width: 1200px; /* Adjust this value as needed */
+  max-width: 1200px;
+  margin: 0 auto;
   padding-bottom: 50px !important;
 }
 
 .swiper {
-  width: 50%;
+  width: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -14,20 +15,50 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%; /* Adjust as needed */
+  height: 100%;
 }
 
 .swiper-slide {
   background-position: center;
   background-size: cover;
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 600px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.swiper-slide img {
+.carousel-slide img {
   display: block;
   width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.swiper-slide-active .swiper-slide-shadow-left,
+.swiper-slide-active .swiper-slide-shadow-right {
+  display: none;
+}
+
+.carousel-slide {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 6% 94%;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-slide-title {
+  background-color: white;
+  color: black;
+  text-align: center;
+  padding-top: 8px;
+}
+.swiper-slide-active .carousel-slide-title {
+  font-weight: bold;
+}
+.carousel-slide-image-container {
+  width: 100%;
+  display: flex;
+  background-color: white;
 }
